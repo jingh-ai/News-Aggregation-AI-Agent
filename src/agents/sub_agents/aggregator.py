@@ -12,6 +12,9 @@ aggregator_agent = Agent(
 
     **DuckDuckGo News:**
     {duckduckgo_news}
+
+    **Reddit News:**
+    {reddit_news}
     
     You should merge the news from these two sources and remove duplicate content.""",
     output_key="news_aggregation", # This will be the final output of the entire system.
