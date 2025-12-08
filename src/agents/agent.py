@@ -2,6 +2,7 @@ from google.adk.agents import ParallelAgent, SequentialAgent
 from .sub_agents.aggregator import aggregator_agent
 from .sub_agents.worker_google_news import google_agent
 from .sub_agents.worker_dds import duckduckgo_agent
+from .sub_agents.worker_reddit import reddit_agent    
 from .sub_agents.editor import editor_agent
 from google.adk.agents import Agent
 from google.adk.tools import AgentTool
@@ -9,7 +10,7 @@ from google.adk.tools import AgentTool
 # The ParallelAgent runs all its sub-agents simultaneously.
 parallel_research_team = ParallelAgent(
     name="ParallelResearchTeam",
-    sub_agents=[google_agent, duckduckgo_agent],
+    sub_agents=[google_agent, duckduckgo_agent, reddit_agent],
 )
 
 # This SequentialAgent defines the high-level workflow: run the parallel team first, then run the aggregator.
